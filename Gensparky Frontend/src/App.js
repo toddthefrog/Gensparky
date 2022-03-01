@@ -5,7 +5,11 @@ function App() {
   return (
     <div className="App">
       <h1>Hello, World!</h1>
-      <Test/>
+      <Test 
+        name="Jimmy"
+        age="30"
+        data="4"  
+      />
     </div>
   );
 }
