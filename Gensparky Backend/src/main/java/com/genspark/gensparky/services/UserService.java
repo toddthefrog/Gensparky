@@ -8,11 +8,11 @@ public interface UserService {
     // get all
     List<User> getUsers();
     // get by id
-    User getUser(Long Id);
+    User getUserById(Long Id);
     // add
     User adduser(User user);
     // update
-    User updateUser(User user);
+    User updateUserById(Long Id, User user);
     // delete by id
     boolean deleteUserById(Long Id);  // returns true if user found and deleted, false if not found
 }

@@ -28,7 +28,7 @@ public class UserController {
     // get user by id
     @GetMapping("/users/{Id}")
     public User getUser(@PathVariable String Id){
-        return userService.getUser(Long.parseLong(Id));
+        return userService.getUserById(Long.parseLong(Id));
     }
 
     @CrossOrigin(origins = "http://localhost:8080")
@@ -39,9 +39,9 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "http://localhost:8080")
-    @PutMapping("/users")
-    public User updateUser(@RequestBody User user){
-        return userService.updateUser(user);
+    @PutMapping("/users/{Id}")
+    public User updateUser(@PathVariable String Id, @RequestBody User user){
+        return userService.updateUserById(Long.parseLong(Id), user);
     }
 
     @CrossOrigin(origins = "http://localhost:8080")
