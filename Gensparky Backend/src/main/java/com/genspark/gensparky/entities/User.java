@@ -17,16 +17,17 @@ public class User {
 
     private String discordName;
 
-    public User(){
+    private long cohort;
 
-    }
+    public User(){}
 
-    public User(long id, String firstName, String lastName, boolean active, String discordName) {
+    public User(long id, String firstName, String lastName, boolean active, String discordName, int cohort) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.active = active;
         this.discordName = discordName;
+        this.cohort = cohort;
     }
 
     public long getId() {
@@ -69,6 +70,14 @@ public class User {
         this.discordName = discordName;
     }
 
+    public long getCohort() {
+        return cohort;
+    }
+
+    public void setCohort(long cohort) {
+        this.cohort = cohort;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -77,6 +86,7 @@ public class User {
                 ", lastName='" + lastName + '\'' +
                 ", active=" + active +
                 ", discordName='" + discordName + '\'' +
+                ", cohort=" + cohort +
                 '}';
     }
 }
