@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e9b5a6-cc31-469b-adbd-b16ae58286ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UserComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/UserService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gensparky Backend/src/main/java/com/genspark/gensparky/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Gensparky Backend/src/main/java/com/genspark/gensparky/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
