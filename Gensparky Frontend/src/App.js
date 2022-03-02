@@ -1,11 +1,12 @@
+import React from 'react';
 import './App.css';
-import Test from './components/Test';
+import UserComponent from './components/UserComponent';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
-      <Test/>
+      <UserComponent />
     </div>
   );
 }
