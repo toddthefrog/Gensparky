@@ -13,11 +13,11 @@ class UserService {
     }
 
     deleteUser(id){
-        return axios.delete(USERS_REST_API_URL+`/${id}`);
+        return axios.delete(USERS_REST_API_URL + `/${id}`);
     }
     
-    updateUser(user){
-        return axios.put(USERS_REST_API_URL, user);
+    updateUser(user,id){
+        return axios.put(USERS_REST_API_URL + `/${id}`, user);
     }
 }
 

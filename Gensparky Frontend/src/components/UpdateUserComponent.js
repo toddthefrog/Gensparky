@@ -1,13 +1,37 @@
 import React from "react";
-import { scryRenderedDOMComponentsWithClass } from "react-dom/test-utils";
+import UserService from "../services/UserService";
 
-class UpdateUserComponent{
+class UpdateUserComponent extends React.Component{
+
+    constructor(props){
+        super(props);
+    }
+
+    updateUser(){
+        let id = 19
+        let testUser = {
+            "firstName":"Joey", 
+            "lastName":"Win",
+            "active":true, 
+            "discordName":"Hamster", 
+            "cohort":2
+        }
+
+        UserService.updateUser(testUser,id);
+        window.location.reload();
+
+    }
+
 
 
     render(){
         return (
             <div>
                 <h3>testing component</h3>
+                <button className="button--updateUser"
+                    onClick={this.updateUser}>
+                        testing updateUser
+                </button>
             </div>
         )
 
