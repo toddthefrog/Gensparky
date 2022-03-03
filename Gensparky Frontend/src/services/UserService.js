@@ -7,6 +7,18 @@ class UserService {
     getUsers(){
         return axios.get(USERS_REST_API_URL);
     }
+
+    addUser(user){
+        return axios.post(USERS_REST_API_URL, user);
+    }
+
+    deleteUser(id){
+        return axios.delete(USERS_REST_API_URL+`/${id}`);
+    }
+    
+    updateUser(user){
+        return axios.put(USERS_REST_API_URL, user);
+    }
 }
 
 export default new UserService();
