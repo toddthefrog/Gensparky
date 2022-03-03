@@ -3,6 +3,7 @@ import './App.css';
 import UserComponent from './components/UserComponent';
 import AddUserComponent from './components/AddUserComponent';
 import DeleteUserComponent from './components/DeleteUserComponent';
+import UpdateUserComponent from './components/UpdateUserComponent';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <UserComponent />
       <AddUserComponent/>
       <DeleteUserComponent/>
+      <UpdateUserComponent/>
     </div>
   );
 }
