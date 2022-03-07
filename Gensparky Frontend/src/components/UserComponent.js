@@ -1,5 +1,6 @@
 import React from 'react';
 import UserService from '../services/UserService';
+import DeleteUserComponent from './DeleteUserComponent';
 
 class UserComponent extends React.Component{
     constructor(props){
@@ -43,7 +44,12 @@ class UserComponent extends React.Component{
                                     <td> {user.discordName}</td>
                                     <td> {user.firstName}</td>
                                     <td> {user.lastName}</td>
-                                    }
+                                    
+                                    <td>
+                                        <DeleteUserComponent 
+                                        id={user.id}/>
+                                    
+                                    </td>
 
                                 </tr>
                             )

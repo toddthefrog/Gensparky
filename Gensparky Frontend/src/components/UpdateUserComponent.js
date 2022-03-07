@@ -8,7 +8,7 @@ class UpdateUserComponent extends React.Component{
     }
 
     updateUser(){
-        let id = 19
+        let id = 25
         let testUser = {
             "firstName":"Joey", 
             "lastName":"Win",
@@ -22,8 +22,6 @@ class UpdateUserComponent extends React.Component{
 
     }
 
-
-
     render(){
         return (
             <div>
@@ -34,7 +32,6 @@ class UpdateUserComponent extends React.Component{
                 </button>
             </div>
         )
-
     }
     
 }
