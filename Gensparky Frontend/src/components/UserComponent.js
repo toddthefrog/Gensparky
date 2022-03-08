@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import UserService from '../services/UserService';
 import DeleteUserComponent from './DeleteUserComponent';
+import UpdateUserComponent from './UpdateUserComponent';
 
 class UserComponent extends React.Component{
     constructor(props){
@@ -47,8 +48,19 @@ class UserComponent extends React.Component{
                                     
                                     <td>
                                         <DeleteUserComponent 
-                                        id={user.id}/>
+                                            id={user.id}/>
                                     
+                                    </td>
+
+                                    <td>
+                                        <UpdateUserComponent 
+                                            id={user.id}
+                                            active={user.active}
+                                            cohort={user.cohort}
+                                            discordName={user.discordName}
+                                            firstName={user.firstName}
+                                            lastName={user.lastName}
+                                        />
                                     </td>
 
                                 </tr>

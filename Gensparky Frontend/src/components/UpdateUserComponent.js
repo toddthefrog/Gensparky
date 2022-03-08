@@ -5,12 +5,16 @@ class UpdateUserComponent extends React.Component{
 
     constructor(props){
         super(props);
+        this.state = {
+            users:[]
+        }
+        
     }
 
     updateUser(){
-        let id = 25
+        let id = 25;
         let testUser = {
-            "firstName":"Joey", 
+            "firstName":"Boy", 
             "lastName":"Win",
             "active":true, 
             "discordName":"Hamster", 
@@ -25,10 +29,9 @@ class UpdateUserComponent extends React.Component{
     render(){
         return (
             <div>
-                <h3>testing component</h3>
                 <button className="button--updateUser"
-                    onClick={this.updateUser}>
-                        testing updateUser
+                    onClick={() => this.updateUser()}>
+                        update Tester
                 </button>
             </div>
         )
