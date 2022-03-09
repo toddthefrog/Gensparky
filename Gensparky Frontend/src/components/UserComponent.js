@@ -12,10 +12,19 @@ class UserComponent extends React.Component {
         }
     }
 
-    componentDidMount() {
-        UserService.getUsers().then((response) => {
-            this.setState({ users: response.data })
-        });
+
+    componentDidMount(){
+        UserService.getUsers()
+            .then(
+                (response) => {
+                    this.setState({
+                        users: response.data
+                    })
+                });
+    }
+
+    updateUser(){
+        
     }
 
     render() {
