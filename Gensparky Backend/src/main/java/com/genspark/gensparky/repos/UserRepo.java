@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepo extends JpaRepository<User, Long> {
-    @Query(value = "Select * from gensparky.user where discord_name = ?1", nativeQuery = true)
-    User getUserByDiscordName(String discordName);
+    @Query(value = "Select * from gensparky.user where discord_id = ?1", nativeQuery = true)
+    User getUserByDiscordName(Long discordId);
 }
