@@ -53,8 +53,8 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "http://localhost:8080")
-    @GetMapping("/users/discord_name/{discordName}")
-    public User getUserByDiscordname(@PathVariable String discordName){
-        return userService.getUserByDiscordName(discordName);
+    @GetMapping("/users/discord_id/{Id}")
+    public User getUserByDiscordId(@PathVariable String Id){
+        return userService.getUserByDiscordId(Long.parseLong(Id));
     }
 }

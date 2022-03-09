@@ -16,5 +16,5 @@ public interface UserService {
     // delete by id
     boolean deleteUserById(Long Id);  // returns true if user found and deleted, false if not found
     // get user by discord name
-    User getUserByDiscordName(String discordName);
+    User getUserByDiscordId(Long discordId);
 }

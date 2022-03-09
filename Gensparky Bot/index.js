@@ -9,7 +9,7 @@ const prefix = "!";
 
 client.on("messageCreate", function (message) {
   // urls  
-  const getUserByDiscordNameURL = "http://localhost:8080/users/discord_name/"
+  const getUserByDiscordIdURL = "http://localhost:8080/users/discord_id/"
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
   const commandBody = message.content.slice(prefix.length);
@@ -28,18 +28,17 @@ client.on("messageCreate", function (message) {
     message.reply("You logged in at " + date.getHours() + ":" + date.getMinutes() + postfix);
     console.log(message.author.username + " logged in at " + date.getHours() + ":" + date.getMinutes() + postfix);
     // remove all non alphanumeric characters from discord name
-    const regex = /[^A-Za-z0-9]/g;
-    const alphaNumericDiscordName = message.author.username.replace(regex, "");
     // post checkin
-    fetchUser(getUserByDiscordNameURL, alphaNumericDiscordName);
+    fetchUser(getUserByDiscordIdURL, message.author.id);
+  }
+  if(command === "id") {
+    message.reply(message.author.id)
   }
 });
 
-function fetchUser(url, discordName) {
+function fetchUser(url, discordId) {
   const checkinURL = "http://localhost:8080/checkins";
-  let uri = discordName;
-  let encoded = encodeURI(uri);
-  fetch(url + encoded)
+  fetch(url + discordId)
     .then(response => response.json())
     .then(data1 => {
       // console.log('Success:', data1);

@@ -15,18 +15,19 @@ public class User {
 
     private boolean active;
 
-    private String discordName;
+    @Column(name = "discord_id")
+    private Long discordId;
 
     private long cohort;
 
     public User(){}
 
-    public User(long id, String firstName, String lastName, boolean active, String discordName, int cohort) {
+    public User(long id, String firstName, String lastName, boolean active, Long discordId, int cohort) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.active = active;
-        this.discordName = discordName;
+        this.discordId = discordId;
         this.cohort = cohort;
     }
 
@@ -62,12 +63,12 @@ public class User {
         this.active = active;
     }
 
-    public String getDiscordName() {
-        return discordName;
+    public Long getDiscordId() {
+        return discordId;
     }
 
-    public void setDiscordName(String discordName) {
-        this.discordName = discordName;
+    public void setDiscordId(Long discordId) {
+        this.discordId = discordId;
     }
 
     public long getCohort() {
@@ -85,7 +86,7 @@ public class User {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", active=" + active +
-                ", discordName='" + discordName + '\'' +
+                ", discordId='" + discordId + '\'' +
                 ", cohort=" + cohort +
                 '}';
     }

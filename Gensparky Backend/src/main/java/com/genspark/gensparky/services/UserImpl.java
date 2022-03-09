@@ -50,7 +50,7 @@ public class UserImpl implements UserService {
     }
 
     @Override
-    public User getUserByDiscordName(String discordName) {
-        return userRepo.getUserByDiscordName(discordName);
+    public User getUserByDiscordId(Long discordId) {
+        return userRepo.getUserByDiscordName(discordId);
     }
 }
