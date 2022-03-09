@@ -1,42 +1,43 @@
 import React from "react";
 import UserService from "../services/UserService";
+import { Button } from 'react-bootstrap';
 
-class UpdateUserComponent extends React.Component{
+class UpdateUserComponent extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            users:[]
+            users: []
         }
-        
+
     }
 
-    updateUser(){
+    updateUser() {
         let id = 25;
         let testUser = {
-            "firstName":"Boy", 
-            "lastName":"Win",
-            "active":true, 
-            "discordName":"Hamster", 
-            "cohort":2
+            "firstName": "Boy",
+            "lastName": "Win",
+            "active": true,
+            "discordName": "Hamster",
+            "cohort": 2
         }
 
-        UserService.updateUser(testUser,id);
+        UserService.updateUser(testUser, id);
         window.location.reload();
 
     }
 
-    render(){
+    render() {
         return (
-            <div>
-                <button className="button--updateUser"
+            <div class="container">
+                <Button className="button--updateUser"
                     onClick={() => this.updateUser()}>
-                        update Tester
-                </button>
+                    Update User
+                </Button>
             </div>
         )
     }
-    
+
 }
 
 export default UpdateUserComponent;

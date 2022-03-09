@@ -1,37 +1,37 @@
 import React from "react"
 import UserService from "../services/UserService"
+import { Form, Button, Row, Col } from 'react-bootstrap';
+class AddUserComponent extends React.Component {
 
-class AddUserComponent extends React.Component{
-    
-    
 
-    constructor(props){
+
+    constructor(props) {
         super(props);
         this.state = {
             active: '',
             cohort: '',
-            discordName: '',
+            discordId: '',
             firstName: '',
-            lastName:''
+            lastName: ''
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange(event){
+    handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value
         });
     }
 
-    handleSubmit(){
+    handleSubmit() {
         let user = {
             id: this.state.id,
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             active: this.state.active,
-            discordName: this.state.discordName,
+            discordId: this.state.discordId,
             cohort: this.state.cohort
 
         }
@@ -40,14 +40,13 @@ class AddUserComponent extends React.Component{
         window.location.reload();
     }
 
-    
+
     addUser() {
         let testUser = {
-            "firstName":"Fluffy", 
-            "lastName":"Win",
-            "active":true, 
-            "discordName":"kingPlasmaG", 
-            "cohort":1
+            "firstName": "Fluffy",
+            "lastName": "Win",
+            "discordId": "kingPlasmaG",
+            "cohort": 1
         };
 
         UserService.addUser(testUser);
@@ -55,40 +54,66 @@ class AddUserComponent extends React.Component{
 
     }
 
-    render(){
-        return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                <br/>
+    render() {
+        return (
+            <div class="container">
+                {/* <form onSubmit={this.handleSubmit}>
+                    <br />
                     <div>
                         <label>First Name:</label>
-                        <input className="form--field" type="text" name="firstName" onChange={this.handleChange}/>
+                        <input className="form--field" type="text" name="firstName" onChange={this.handleChange} />
                     </div>
 
                     <div>
                         <label>Last Name:</label>
-                        <input className="form--field" type="text" name="lastName" onChange={this.handleChange}/>
+                        <input className="form--field" type="text" name="lastName" onChange={this.handleChange} />
                     </div>
 
                     <div>
                         <label>Active:</label>
-                        <input className="form--field" type="text" name="active" onChange={this.handleChange}/>
+                        <input className="form--field" type="text" name="active" onChange={this.handleChange} />
                     </div>
 
                     <div>
                         <label>Discord Name:</label>
-                        <input className="form--field" type="text" name="discordName" onChange={this.handleChange}/>
+                        <input className="form--field" type="text" name="discordId" onChange={this.handleChange} />
                     </div>
 
                     <div>
                         <label>Cohort:</label>
-                        <input className="form--field" type="text" name="cohort" onChange={this.handleChange}/>
+                        <input className="form--field" type="text" name="cohort" onChange={this.handleChange} />
                     </div>
 
                     <button className="btn--success" type="submit">Submit</button>
 
                 </form>
-                <br/>
+                <br /> */}
+                <br />
+                <Form onSubmit={this.handleSubmit}>
+                    <Row className="mb-3">
+                        <Form.Group as={Col} controlId="formFirstName">
+                            <Form.Label>First Name</Form.Label>
+                            <Form.Control type="text" placeholder="Tony" name="firstName" onChange={this.handleChange} />
+                        </Form.Group>
+                        <Form.Group as={Col} controlId="formFirstName">
+                            <Form.Label>First Name</Form.Label>
+                            <Form.Control type="text" placeholder="Stark" name="lastName" onChange={this.handleChange} />
+                        </Form.Group>
+                    </Row>
+                    <Row className="mb-3">
+                        <Form.Group as={Col} controlId="formDiscordId">
+                            <Form.Label>Discord Id</Form.Label>
+                            <Form.Control type="text" placeholder="use the command !id in discord and paste the reply here" name="discordId" onChange={this.handleChange} />
+                        </Form.Group>
+                        <Form.Group as={Col} controlId="formCohort">
+                            <Form.Label>Cohort</Form.Label>
+                            <Form.Control type="text" placeholder="1" name="cohort" onChange={this.handleChange} />
+                        </Form.Group>
+                    </Row>
+                    <Button variant="primary" type="submit">
+                        Register User
+                    </Button>
+                </Form>
             </div>
         )
     }

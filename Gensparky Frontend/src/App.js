@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <UserComponent />
       <AddUserComponent/>
+      <br />
       <UpdateUserComponent/>
     </div>
   );
