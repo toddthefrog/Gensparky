@@ -51,4 +51,10 @@ public class UserController {
     public boolean deleteUser(@PathVariable String Id){
         return userService.deleteUserById(Long.parseLong(Id));
     }
+
+    @CrossOrigin(origins = "http://localhost:8080")
+    @GetMapping("/users/discord_name/{discordName}")
+    public User getUserByDiscordname(@PathVariable String discordName){
+        return userService.getUserByDiscordName(discordName);
+    }
 }

@@ -48,4 +48,9 @@ public class UserImpl implements UserService {
         }
         return false;
     }
+
+    @Override
+    public User getUserByDiscordName(String discordName) {
+        return userRepo.getUserByDiscordName(discordName);
+    }
 }
