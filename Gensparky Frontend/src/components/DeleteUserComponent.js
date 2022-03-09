@@ -1,5 +1,6 @@
 import React from "react";
 import UserService from "../services/UserService";
+import { Button } from 'react-bootstrap';
 
 export default function DeleteUserComponent(props) {
   
@@ -10,9 +11,9 @@ export default function DeleteUserComponent(props) {
     }
 
         return (
-            <button onClick={() => deleteUser(props.id)}>
-                delete
-            </button>
+            <Button onClick={() => deleteUser(props.id)}>
+                Delete User
+            </Button>
         );
 }
 

@@ -13,7 +13,7 @@ public class User {
 
     private String lastName;
 
-    private boolean active;
+    private boolean active = true;
 
     @Column(name = "discord_id")
     private Long discordId;
