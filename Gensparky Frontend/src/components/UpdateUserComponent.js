@@ -45,8 +45,10 @@ class UpdateUserComponent extends React.Component {
             <div class="container">
                 <Button className="button--updateUser"
                     onClick={() => this.updateUser()}>
-                    Update User
+                        update Tester
                 </Button>
+
+                
             </div>
         )
     }
