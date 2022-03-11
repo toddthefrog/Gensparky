@@ -19,6 +19,14 @@ class UserService {
     updateUser(user,id){
         return axios.put(USERS_REST_API_URL + `/${id}`, user);
     }
+
+    getBenchUsers(){
+        return axios.get('http://localhost:8080/users/bench')
+    }
+
+    getTrainees(){
+        return axios.get('http://localhost:8080/users/trainees')
+    }
 }
 
 export default new UserService();

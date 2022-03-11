@@ -17,4 +17,8 @@ public interface UserService {
     boolean deleteUserById(Long Id);  // returns true if user found and deleted, false if not found
     // get user by discord name
     User getUserByDiscordId(Long discordId);
+    // get users on bench
+    List<User> getBenchUsers();
+    // get trainees in cohorts
+    List<User> getTrainees();
 }

@@ -58,4 +58,16 @@ public class UserController {
     public User getUserByDiscordId(@PathVariable String Id){
         return userService.getUserByDiscordId(Long.parseLong(Id));
     }
+
+    @CrossOrigin(origins = "http://localhost:8080")
+    @GetMapping("/users/bench")
+    public List<User> getBenchUsers(){
+        return userService.getBenchUsers();
+    }
+
+    @CrossOrigin(origins = "http://localhost:8080")
+    @GetMapping("/users/trainees")
+    public List<User> getTrainees(){
+        return userService.getTrainees();
+    }
 }

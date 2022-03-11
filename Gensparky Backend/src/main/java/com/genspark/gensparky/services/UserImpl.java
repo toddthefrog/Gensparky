@@ -29,14 +29,13 @@ public class UserImpl implements UserService {
 
     @Override
     public User adduser(User user) {
-        user.setActive(true);
         return userRepo.save(user);
     }
 
     @Override
     public User updateUserById(Long Id, User user) {
         User userFromDB = userRepo.getById(Id);
-        userFromDB.setActive(user.getActive());
+        userFromDB.setBench(user.getBench());
         userFromDB.setCohort(user.getCohort());
         userFromDB.setDiscordId(user.getDiscordId());
         userFromDB.setFirstName(user.getFirstName());
@@ -60,5 +59,15 @@ public class UserImpl implements UserService {
     @Override
     public User getUserByDiscordId(Long discordId) {
         return userRepo.getUserByDiscordName(discordId);
+    }
+
+    @Override
+    public List<User> getBenchUsers() {
+        return userRepo.getBenchUsers();
+    }
+
+    @Override
+    public List<User> getTrainees() {
+        return userRepo.getTrainees();
     }
 }

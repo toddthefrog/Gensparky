@@ -8,7 +8,7 @@ class AddUserComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: '',
+            bench: '',
             cohort: '',
             discordId: '',
             firstName: '',
@@ -18,6 +18,12 @@ class AddUserComponent extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
+
+    handleSwitch(elem, state) {
+        console.log('handleSwitch. elem:', elem);
+        console.log('name:', elem.props.name);
+        console.log('new state:', state);
+      }
 
     handleChange(event) {
         this.setState({
@@ -30,7 +36,7 @@ class AddUserComponent extends React.Component {
             id: this.state.id,
             firstName: this.state.firstName,
             lastName: this.state.lastName,
-            active: this.state.active,
+            bench: this.state.bench,
             discordId: this.state.discordId,
             cohort: this.state.cohort
 
@@ -105,15 +111,25 @@ class AddUserComponent extends React.Component {
                             <Form.Label>Discord ID</Form.Label>
                             <Form.Control type="text" name="discordId" onChange={this.handleChange} />
                             <Form.Text className="text-muted">
-                                Use the command !id in discord to get your id.
+                            <h6>Use the command <b>!id</b> in your discord channel to get your id.</h6>
                             </Form.Text>
                         </Form.Group>
                         <Form.Group as={Col} controlId="formCohort">
                             <Form.Label>Cohort</Form.Label>
-                            <Form.Control type="text" placeholder="1" name="cohort" onChange={this.handleChange} />
+                            <Form.Control type="text" name="cohort" onChange={this.handleChange} />
                         </Form.Group>
                     </Row>
-                    <Button variant="outline-primary" type="submit">
+                    <Row>
+                        <Form.Group as={Col} controlId="formTrainee">
+                            <Form.Check
+                                type="switch"
+                                id="custom-switch"
+                                label="Trainee"
+                            />
+                        </Form.Group>
+                    </Row>
+                    <br/>
+                    <Button variant="outline-primary" type="submit" onChange={this.handleChange}>
                         Register User
                     </Button>
                 </Form>
