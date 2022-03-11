@@ -34,9 +34,16 @@ public class UserImpl implements UserService {
 
     @Override
     public User updateUserById(Long Id, User user) {
-        user.setId(Id);
-        return userRepo.save(user);
+        User userFromDB = userRepo.getById(Id);
+        userFromDB.setActive(user.getActive());
+        userFromDB.setCohort(user.getCohort());
+        userFromDB.setDiscordId(user.getDiscordId());
+        userFromDB.setFirstName(user.getFirstName());
+        userFromDB.setLastName(user.getLastName());
+        userFromDB.setTimeInMilliseconds(user.getTimeInMilliseconds());
+        return userRepo.save(userFromDB);
     }
+
 
     @Override
     public boolean deleteUserById(Long Id) {

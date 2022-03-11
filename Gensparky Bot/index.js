@@ -37,16 +37,20 @@ client.on("messageCreate", function (message) {
 });
 
 function fetchUser(url, discordId) {
-  const checkinURL = "http://localhost:8080/checkins";
+  const checkinURL = "http://localhost:8080/users/";
   fetch(url + discordId)
     .then(response => response.json())
     .then(data1 => {
       // console.log('Success:', data1);
       let userId = data1["id"];
+      let firstName = data1["firstName"];
+      let lastName = data1["lastName"];
+      let active = data1["active"];
+      let cohort = data1["cohort"]
       let millis = Date.now();
-      var postData = { "userId": userId, "timeInMilliseconds": millis };
-      fetch(checkinURL, {
-        method: 'POST', // or 'PUT'
+      var postData = { "firstName":firstName, "lastName":lastName, "active":active, "discordId":discordId, "cohort":cohort, "timeInMilliseconds": millis };
+      fetch(checkinURL + userId, {
+        method: 'PUT', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
         },
