@@ -102,8 +102,11 @@ class AddUserComponent extends React.Component {
                     </Row>
                     <Row className="mb-3">
                         <Form.Group as={Col} controlId="formDiscordId">
-                            <Form.Label>Discord Id</Form.Label>
-                            <Form.Control type="text" placeholder="use the command !id in discord and paste the reply here" name="discordId" onChange={this.handleChange} />
+                            <Form.Label>Discord ID</Form.Label>
+                            <Form.Control type="text" name="discordId" onChange={this.handleChange} />
+                            <Form.Text className="text-muted">
+                                Use the command !id in discord to get your id.
+                            </Form.Text>
                         </Form.Group>
                         <Form.Group as={Col} controlId="formCohort">
                             <Form.Label>Cohort</Form.Label>

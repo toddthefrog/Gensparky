@@ -30,7 +30,7 @@ class UserComponent extends React.Component {
                             <th>Last Name</th>
                             <th>Active</th>
                             <th>Cohort</th>
-                            <th>Discord Id</th>
+                            <th>Discord ID</th>
 
                         </tr>
                     </thead>
