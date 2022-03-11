@@ -1,7 +1,8 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import UserService from '../services/UserService';
 import DeleteUserComponent from './DeleteUserComponent';
 import UpdateUserComponent from './UpdateUserComponent';
+import AttendanceComponent from './AttendanceComponent';
 import { Table } from 'react-bootstrap';
 
 class UserComponent extends React.Component {
@@ -31,7 +32,7 @@ class UserComponent extends React.Component {
                             <th>Active</th>
                             <th>Cohort</th>
                             <th>Discord ID</th>
-                            <th>Latest Checkin</th>
+                            <th>Status</th>
 
                         </tr>
                     </thead>
@@ -46,7 +47,7 @@ class UserComponent extends React.Component {
                                         <td> {user.active.toString()}</td>
                                         <td> {user.cohort}</td>
                                         <td> {user.discordId}</td>
-                                        <td> {user.timeInMilliseconds}</td>
+                                        <td> <AttendanceComponent timeInMilliseconds={user.timeInMilliseconds}/></td>
 
                                         <td>
                                             <DeleteUserComponent

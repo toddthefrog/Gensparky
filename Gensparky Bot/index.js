@@ -25,8 +25,9 @@ client.on("messageCreate", function (message) {
     } else {
       postfix = " AM EST"
     }
-    message.reply("You logged in at " + date.getHours() + ":" + date.getMinutes() + postfix);
-    console.log(message.author.username + " logged in at " + date.getHours() + ":" + date.getMinutes() + postfix);
+    mins = ('0'+date.getMinutes()).slice(-2);
+    message.reply("You logged in at " + hours + ":" + mins + postfix);
+    console.log(message.author.username + " logged in at " + hours + ":" + mins + postfix);
     // remove all non alphanumeric characters from discord name
     // post checkin
     fetchUser(getUserByDiscordIdURL, message.author.id);
