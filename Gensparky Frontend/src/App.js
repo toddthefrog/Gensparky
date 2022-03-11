@@ -10,17 +10,23 @@ import {
    Route,
    Link
 } from 'react-router-dom';
+import { Nav, NavLink, NavMenu }
+    from "./components/NavbarElements";
 
 function App() {
   return (
   <Router>
     <div className="App">
-             <li>
-               <Link to="/">User List</Link>
-             </li>
-             <li>
-               <Link to="/adduser">Register User</Link>
-             </li>
+          <Nav>
+            <NavMenu>
+              <NavLink to="/" activeStyle>
+                User List
+              </NavLink>
+              <NavLink to="/adduser" activeStyle>
+                Register User
+              </NavLink>
+            </NavMenu>
+          </Nav>
                   <Routes>
                   <Route exact path='/' element={< UserComponent />}></Route>
                   <Route exact path='/adduser' element={< AddUserComponent />}></Route>
