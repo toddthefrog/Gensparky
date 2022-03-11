@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 export default function DeleteUserComponent(props) {
 
@@ -24,25 +24,34 @@ export default function DeleteUserComponent(props) {
         if (checkin.getHours() < 9) {
             checkedInToday = true;
         }
-        if (checkin.getHours() >= 9 && checkin.getHours() <= 10) {
+        if (checkin.getHours() >= 9 && checkin.getHours() < 10) {
             checkedInToday = true;
             late = true;
         }
         if (year && month && day && checkedInToday && !late) {
             console.log(year, month, day, checkedInToday)
-            return <Badge  bg="success">present</Badge>
+            // return <Badge  bg="success">present</Badge>
+            return <Button variant="success" disabled>
+                Present
+            </Button>
         } else if (year && month && day && checkedInToday && late) {
             console.log(year, month, day, checkedInToday)
-            return <Badge  bg="warning">late</Badge>
+            // return <Badge bg="warning">late</Badge>
+            return < Button variant="warning" disabled >
+                Late
+            </Button >
         } else {
             console.log(year, month, day, checkedInToday)
-            return <Badge  bg="danger">absent</Badge>
+            // return <Badge bg="danger">absent</Badge>
+            return <Button variant="danger" disabled>
+                Absent
+            </Button>
         }
     }
 
     return (
         <div>
-            <h4>{isCheckinToday(props.timeInMilliseconds)}</h4>
+            {isCheckinToday(props.timeInMilliseconds)}
         </div>
     );
 }

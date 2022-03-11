@@ -2,3 +2,13 @@ h1{
   text-align: center;
   font-size: 400px;
 }
+
+.table td {
+  text-align: center;
+  vertical-align: middle;   
+}
+
+.table th {
+  text-align: center;
+  vertical-align: middle;
+}

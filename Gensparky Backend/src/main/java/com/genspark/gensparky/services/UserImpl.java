@@ -29,6 +29,7 @@ public class UserImpl implements UserService {
 
     @Override
     public User adduser(User user) {
+        user.setActive(true);
         return userRepo.save(user);
     }
 

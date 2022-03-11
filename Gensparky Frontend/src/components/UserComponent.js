@@ -33,6 +33,8 @@ class UserComponent extends React.Component {
                             <th>Cohort</th>
                             <th>Discord ID</th>
                             <th>Status</th>
+                            <th>Delete</th>
+                            <th>Update</th>
 
                         </tr>
                     </thead>
@@ -47,13 +49,9 @@ class UserComponent extends React.Component {
                                         <td> {user.active.toString()}</td>
                                         <td> {user.cohort}</td>
                                         <td> {user.discordId}</td>
-                                        <td> <AttendanceComponent timeInMilliseconds={user.timeInMilliseconds}/></td>
+                                        <td> <AttendanceComponent timeInMilliseconds={user.timeInMilliseconds} /></td>
 
-                                        <td>
-                                            <DeleteUserComponent
-                                                id={user.id} />
-
-                                        </td>
+                                        <td> <DeleteUserComponent id={user.id} /></td>
 
                                         <td>
                                             <UpdateUserComponent
