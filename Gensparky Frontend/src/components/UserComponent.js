@@ -25,12 +25,13 @@ class UserComponent extends React.Component {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>#</th>
+                            {/* <th>#</th> */}
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Active</th>
                             <th>Cohort</th>
                             <th>Discord ID</th>
+                            <th>Latest Checkin</th>
 
                         </tr>
                     </thead>
@@ -39,12 +40,13 @@ class UserComponent extends React.Component {
                             this.state.users.map(
                                 user =>
                                     <tr key={user.id}>
-                                        <td> {user.id}</td>
+                                        {/* <td> {user.id}</td> */}
                                         <td> {user.firstName}</td>
                                         <td> {user.lastName}</td>
                                         <td> {user.active.toString()}</td>
                                         <td> {user.cohort}</td>
                                         <td> {user.discordId}</td>
+                                        <td> {user.timeInMilliseconds}</td>
 
                                         <td>
                                             <DeleteUserComponent
@@ -62,7 +64,6 @@ class UserComponent extends React.Component {
                                                 lastName={user.lastName}
                                             />
                                         </td>
-
                                     </tr>
                             )
                         }

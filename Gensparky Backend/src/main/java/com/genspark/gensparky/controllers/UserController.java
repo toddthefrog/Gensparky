@@ -40,6 +40,7 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "http://localhost:8080")
+//    @PutMapping("/users/{Id}")
     @PutMapping("/users/{Id}")
     public User updateUser(@PathVariable String Id, @RequestBody User user){
         return userService.updateUserById(Long.parseLong(Id), user);

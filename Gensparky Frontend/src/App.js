@@ -20,7 +20,7 @@ function App() {
           <Nav>
             <NavMenu>
               <NavLink to="/" activeStyle>
-                User List
+                Dashboard
               </NavLink>
               <NavLink to="/adduser" activeStyle>
                 Register User
@@ -32,7 +32,7 @@ function App() {
                   <Route exact path='/adduser' element={< AddUserComponent />}></Route>
                   </Routes>
       <br />
-      <UpdateUserComponent/>
+      {/* <UpdateUserComponent/> */}
     </div>
     </Router>
   );

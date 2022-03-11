@@ -20,15 +20,19 @@ public class User {
 
     private long cohort;
 
+    @Column(name = "time_in_milliseconds")
+    private long timeInMilliseconds;
+
     public User(){}
 
-    public User(long id, String firstName, String lastName, boolean active, Long discordId, int cohort) {
+    public User(long id, String firstName, String lastName, boolean active, Long discordId, long cohort, long timeInMilliseconds) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.active = active;
         this.discordId = discordId;
         this.cohort = cohort;
+        this.timeInMilliseconds = timeInMilliseconds;
     }
 
     public long getId() {
@@ -55,7 +59,7 @@ public class User {
         this.lastName = lastName;
     }
 
-    public boolean isActive() {
+    public boolean getActive() {
         return active;
     }
 
@@ -79,15 +83,13 @@ public class User {
         this.cohort = cohort;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", active=" + active +
-                ", discordId='" + discordId + '\'' +
-                ", cohort=" + cohort +
-                '}';
+    public long getTimeInMilliseconds() {
+        return timeInMilliseconds;
     }
+
+    public void setTimeInMilliseconds(long timeInMilliseconds) {
+        this.timeInMilliseconds = timeInMilliseconds;
+    }
+
+
 }
