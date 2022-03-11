@@ -5,16 +5,16 @@ import UpdateUserComponent from './UpdateUserComponent';
 import AttendanceComponent from './AttendanceComponent';
 import { Table } from 'react-bootstrap';
 
-class UserComponent extends React.Component {
+class BenchUserComponent extends React.Component {
 
     presentTime() {
         const monthNames = ["January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
         ];
         let currentdate = new Date();
-        var datetime = "Current as of " + monthNames[currentdate.getDay()] + " " + currentdate.getMonth()
+        var datetime = "Last Sync: " + monthNames[currentdate.getDay()] + " " + currentdate.getMonth()
             + " @ "
-            + currentdate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+            +  currentdate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
             + " EST"
         return datetime
     }
@@ -27,7 +27,7 @@ class UserComponent extends React.Component {
     }
 
     componentDidMount() {
-        UserService.getTrainees().then((response) => {
+        UserService.getBenchUsers().then((response) => {
             this.setState({ users: response.data })
         });
     }
@@ -43,7 +43,7 @@ class UserComponent extends React.Component {
                             <th>First Name</th>
                             <th>Last Name</th>
                             {/* <th>Active</th> */}
-                            <th>Cohort</th>
+                            {/* <th>Cohort</th> */}
                             <th>Discord ID</th>
                             <th>Status</th>
                             <th>Delete</th>
@@ -59,8 +59,8 @@ class UserComponent extends React.Component {
                                         {/* <td> {user.id}</td> */}
                                         <td> {user.firstName}</td>
                                         <td> {user.lastName}</td>
-                                        {/* <td> {user.active.toString()}</td> */}
-                                        <td> {user.cohort}</td>
+                                        {/* <td> {user.bench.toString()}</td> */}
+                                        {/* <td> {user.cohort}</td> */}
                                         <td> {user.discordId}</td>
                                         <td> <AttendanceComponent timeInMilliseconds={user.timeInMilliseconds} /></td>
 
@@ -69,7 +69,7 @@ class UserComponent extends React.Component {
                                         <td>
                                             <UpdateUserComponent
                                                 id={user.id}
-                                                active={user.active}
+                                                bench={user.bench}
                                                 cohort={user.cohort}
                                                 discordName={user.discordName}
                                                 firstName={user.firstName}
@@ -88,4 +88,4 @@ class UserComponent extends React.Component {
     }
 }
 
-export default UserComponent
+export default BenchUserComponent

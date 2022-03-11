@@ -17,7 +17,7 @@ class UpdateUserComponent extends React.Component {
         let testUser = {
             "firstName": "Boy",
             "lastName": "Win",
-            "active": true,
+            "bench": true,
             "discordName": "Hamster",
             "cohort": 2
         }

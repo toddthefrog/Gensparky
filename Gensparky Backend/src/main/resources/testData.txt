@@ -1,0 +1,26 @@
+{
+    "firstName": "Todd",
+    "lastName": "Trowbridge",
+    "bench": 1,
+    "discordId": 922469640125415465,
+    "cohort": 1,
+    "timeInMilliseconds": 1646988800749
+}
+
+{
+    "firstName": "Jimmy",
+    "lastName": "Nguyen",
+    "bench": 0,
+    "discordId": 291688521834430464,
+    "cohort": 2,
+    "timeInMilliseconds": 1647005169994
+}
+
+{
+    "firstName": "Mahamadou",
+    "lastName": "Adam",
+    "bench": 0,
+    "discordId": 140608116990410754,
+    "cohort": 1,
+    "timeInMilliseconds": 0
+}
