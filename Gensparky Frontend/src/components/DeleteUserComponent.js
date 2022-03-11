@@ -11,7 +11,7 @@ export default function DeleteUserComponent(props) {
     }
 
         return (
-            <Button onClick={() => deleteUser(props.id)}>
+            <Button onClick={() => deleteUser(props.id)} variant="outline-danger">
                 Delete User
             </Button>
         );

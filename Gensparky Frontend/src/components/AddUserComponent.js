@@ -113,7 +113,7 @@ class AddUserComponent extends React.Component {
                             <Form.Control type="text" placeholder="1" name="cohort" onChange={this.handleChange} />
                         </Form.Group>
                     </Row>
-                    <Button variant="primary" type="submit">
+                    <Button variant="outline-primary" type="submit">
                         Register User
                     </Button>
                 </Form>
