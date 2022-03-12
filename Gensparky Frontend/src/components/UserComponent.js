@@ -2,18 +2,37 @@ import React, { useReducer } from 'react';
 import UserService from '../services/UserService';
 import DeleteUserComponent from './DeleteUserComponent';
 import UpdateUserComponent from './UpdateUserComponent';
+import Modal from './Modal';
 import { Table } from 'react-bootstrap';
 
+import { useState } from "react";
+
 class UserComponent extends React.Component {
+    
+    
+
     constructor(props) {
         super(props)
         this.state = {
-            users: []
-        }
+            users: [],
+            show: false
+        };
+        
+        this.showModal = this.showModal.bind(this);
+        this.showModal = this.hideModal.bind(this);
+    }
+
+    showModal = () => {
+        this.setState({show: true})
+    }
+
+    hideModal = () => {
+        this.setState({show: false})
     }
 
 
     componentDidMount(){
+
         UserService.getUsers()
             .then(
                 (response) => {
@@ -77,6 +96,12 @@ class UserComponent extends React.Component {
                         }
                     </tbody>
                 </Table>
+                <Modal show={this.state.show} handleClose={this.hideModal}>
+          <         p>Modal</p>
+                </Modal>
+                <button type="button" onClick={this.showModal}>
+                    open
+                </button>
             </div>
         )
     }
