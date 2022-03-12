@@ -12,7 +12,7 @@ class BenchUserComponent extends React.Component {
             "July", "August", "September", "October", "November", "December"
         ];
         let currentdate = new Date();
-        var datetime = "Last Sync: " + monthNames[currentdate.getDay()] + " " + currentdate.getMonth()
+        var datetime = "Current as of " + monthNames[currentdate.getDay()] + " " + currentdate.getMonth()
             + " @ "
             +  currentdate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
             + " EST"
@@ -35,7 +35,7 @@ class BenchUserComponent extends React.Component {
     render() {
         return (
             <div class="container">
-                <h1 className="">{this.presentTime()}</h1>
+                <h3>{this.presentTime()}</h3>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
