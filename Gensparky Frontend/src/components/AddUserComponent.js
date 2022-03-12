@@ -102,7 +102,7 @@ class AddUserComponent extends React.Component {
                             <Form.Control type="text" placeholder="Tony" name="firstName" onChange={this.handleChange} />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formFirstName">
-                            <Form.Label>First Name</Form.Label>
+                            <Form.Label>Last Name</Form.Label>
                             <Form.Control type="text" placeholder="Stark" name="lastName" onChange={this.handleChange} />
                         </Form.Group>
                     </Row>

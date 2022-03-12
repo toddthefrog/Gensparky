@@ -35,7 +35,7 @@ class UserComponent extends React.Component {
     render() {
         return (
             <div class="container">
-                <h1 className="">{this.presentTime()}</h1>
+                <h3 className="">{this.presentTime()}</h3>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
