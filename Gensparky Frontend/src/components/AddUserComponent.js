@@ -3,8 +3,6 @@ import UserService from "../services/UserService"
 import { Form, Button, Row, Col } from 'react-bootstrap';
 class AddUserComponent extends React.Component {
 
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -46,54 +44,9 @@ class AddUserComponent extends React.Component {
         window.location.reload();
     }
 
-
-    addUser() {
-        let testUser = {
-            "firstName": "Fluffy",
-            "lastName": "Win",
-            "discordId": "kingPlasmaG",
-            "cohort": 1
-        };
-
-        UserService.addUser(testUser);
-        window.location.reload();
-
-    }
-
     render() {
         return (
             <div class="container">
-                {/* <form onSubmit={this.handleSubmit}>
-                    <br />
-                    <div>
-                        <label>First Name:</label>
-                        <input className="form--field" type="text" name="firstName" onChange={this.handleChange} />
-                    </div>
-
-                    <div>
-                        <label>Last Name:</label>
-                        <input className="form--field" type="text" name="lastName" onChange={this.handleChange} />
-                    </div>
-
-                    <div>
-                        <label>Active:</label>
-                        <input className="form--field" type="text" name="active" onChange={this.handleChange} />
-                    </div>
-
-                    <div>
-                        <label>Discord Name:</label>
-                        <input className="form--field" type="text" name="discordId" onChange={this.handleChange} />
-                    </div>
-
-                    <div>
-                        <label>Cohort:</label>
-                        <input className="form--field" type="text" name="cohort" onChange={this.handleChange} />
-                    </div>
-
-                    <button className="btn--success" type="submit">Submit</button>
-
-                </form>
-                <br /> */}
                 <br />
                 <Form onSubmit={this.handleSubmit}>
                     <Row className="mb-3">
@@ -120,7 +73,7 @@ class AddUserComponent extends React.Component {
                         </Form.Group>
                     </Row>
                     <Row>
-                        <Form.Group as={Col} controlId="formTrainee">
+                        <Form.Group as={Col} controlId="formTrainee" checked >
                             <Form.Check
                                 type="switch"
                                 id="custom-switch"
