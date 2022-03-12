@@ -4,6 +4,8 @@ import DeleteUserComponent from './DeleteUserComponent';
 import UpdateUserComponent from './UpdateUserComponent';
 import AttendanceComponent from './AttendanceComponent';
 import { Table } from 'react-bootstrap';
+import RefreshedComponent from './RefreshedComponent'
+import ExampleModal from './ExampleModal';
 
 class UserComponent extends React.Component {
 
@@ -23,6 +25,9 @@ class UserComponent extends React.Component {
     render() {
         return (
             <div class="container">
+                <br />
+                <RefreshedComponent />
+                <br />
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -54,14 +59,15 @@ class UserComponent extends React.Component {
                                         <td> <DeleteUserComponent id={user.id} /></td>
 
                                         <td>
-                                            <UpdateUserComponent
+                                            {/* <UpdateUserComponent
                                                 id={user.id}
                                                 active={user.active}
                                                 cohort={user.cohort}
                                                 discordName={user.discordName}
                                                 firstName={user.firstName}
                                                 lastName={user.lastName}
-                                            />
+                                            /> */}
+                                            <ExampleModal />
                                         </td>
                                     </tr>
 

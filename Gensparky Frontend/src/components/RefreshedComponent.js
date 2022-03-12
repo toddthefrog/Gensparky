@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ExampleModal from './ExampleModal';
 
 class RefreshedComponent extends Component {
 
@@ -18,6 +19,7 @@ class RefreshedComponent extends Component {
         return (
             <div>
                 <h5 className="">{this.presentTime()}</h5>
+                <ExampleModal/>
             </div>
         );
     }
