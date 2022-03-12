@@ -19,7 +19,6 @@ class RefreshedComponent extends Component {
         return (
             <div>
                 <h5 className="">{this.presentTime()}</h5>
-                <ExampleModal/>
             </div>
         );
     }

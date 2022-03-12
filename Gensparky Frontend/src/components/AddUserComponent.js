@@ -83,7 +83,7 @@ class AddUserComponent extends React.Component {
                     </Row>
                     <br/>
                     <Button variant="outline-primary" type="submit" onChange={this.handleChange}>
-                        Register User
+                        Add Trainee
                     </Button>
                 </Form>
             </div>
