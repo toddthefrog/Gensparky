@@ -34,9 +34,9 @@ class UserComponent extends React.Component {
                             {/* <th>#</th> */}
                             <th>First Name</th>
                             <th>Last Name</th>
-                            {/* <th>Active</th> */}
                             <th>Cohort</th>
                             <th>Discord ID</th>
+                            <th>Last Check-in</th>
                             <th>Status</th>
                             <th>Delete</th>
                             <th>Update</th>
@@ -51,22 +51,12 @@ class UserComponent extends React.Component {
                                         {/* <td> {user.id}</td> */}
                                         <td> {user.firstName}</td>
                                         <td> {user.lastName}</td>
-                                        {/* <td> {user.active.toString()}</td> */}
                                         <td> {user.cohort}</td>
                                         <td> {user.discordId}</td>
+                                        <td> {user.timeInMilliseconds} </td>
                                         <td> <AttendanceComponent timeInMilliseconds={user.timeInMilliseconds} /></td>
-
                                         <td> <DeleteUserComponent id={user.id} /></td>
-
                                         <td>
-                                            {/* <UpdateUserComponent
-                                                id={user.id}
-                                                active={user.active}
-                                                cohort={user.cohort}
-                                                discordName={user.discordName}
-                                                firstName={user.firstName}
-                                                lastName={user.lastName}
-                                            /> */}
                                             <ModalComponent
                                                 id={user.id}
                                                 cohort={user.cohort}
@@ -74,6 +64,7 @@ class UserComponent extends React.Component {
                                                 lastName={user.lastName}
                                                 bench={user.bench}
                                                 discordId={user.discordId}
+                                                timeInMilliseconds={user.timeInMilliseconds}
                                             />
                                         </td>
                                     </tr>

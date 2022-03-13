@@ -75,6 +75,7 @@ class BenchUserComponent extends React.Component {
                                                 lastName={user.lastName}
                                                 bench={user.bench}
                                                 discordId={user.discordId}
+                                                timeInMilliseconds={user.timeInMilliseconds}
                                             />
                                         </td>
                                     </tr>

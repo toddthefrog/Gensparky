@@ -17,7 +17,7 @@ export default function ModalComponent(props) {
         setUserFormData({ ...userFormData, [name]: value });
     };
     const handleFormSubmit = async(event) => {
-        let user = { id: userFormData.id, cohort: userFormData.cohort, discordId: userFormData.discordId, firstName: userFormData.firstName, lastName: userFormData.lastName, bench: userFormData.bench }
+        let user = { id: userFormData.id, cohort: userFormData.cohort, discordId: userFormData.discordId, firstName: userFormData.firstName, lastName: userFormData.lastName, bench: userFormData.bench, timeInMilliseconds: props.timeInMilliseconds }
         event.preventDefault();
         UserService.updateUser(user, props.id)
         console.log(user)
