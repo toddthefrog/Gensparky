@@ -34,7 +34,7 @@ class AddUserComponent extends React.Component {
             id: this.state.id,
             firstName: this.state.firstName,
             lastName: this.state.lastName,
-            bench: this.state.bench,
+            bench: false,
             discordId: this.state.discordId,
             cohort: this.state.cohort
 
@@ -70,15 +70,6 @@ class AddUserComponent extends React.Component {
                         <Form.Group as={Col} controlId="formCohort">
                             <Form.Label>Cohort</Form.Label>
                             <Form.Control type="text" name="cohort" onChange={this.handleChange} />
-                        </Form.Group>
-                    </Row>
-                    <Row>
-                        <Form.Group as={Col} controlId="formTrainee" checked >
-                            <Form.Check
-                                type="switch"
-                                id="custom-switch"
-                                label="Trainee"
-                            />
                         </Form.Group>
                     </Row>
                     <br/>

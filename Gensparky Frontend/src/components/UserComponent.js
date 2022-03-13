@@ -5,7 +5,7 @@ import UpdateUserComponent from './UpdateUserComponent';
 import AttendanceComponent from './AttendanceComponent';
 import { Table } from 'react-bootstrap';
 import RefreshedComponent from './RefreshedComponent'
-import ExampleModal from './ExampleModal';
+import ModalComponent from './ModalComponent'
 
 class UserComponent extends React.Component {
 
@@ -24,7 +24,7 @@ class UserComponent extends React.Component {
 
     render() {
         return (
-            <div class="container">
+            <div className="container">
                 <br />
                 <RefreshedComponent />
                 <br />
@@ -67,7 +67,14 @@ class UserComponent extends React.Component {
                                                 firstName={user.firstName}
                                                 lastName={user.lastName}
                                             /> */}
-                                            <ExampleModal />
+                                            <ModalComponent
+                                                id={user.id}
+                                                cohort={user.cohort}
+                                                firstName={user.firstName}
+                                                lastName={user.lastName}
+                                                bench={user.bench}
+                                                discordId={user.discordId}
+                                            />
                                         </td>
                                     </tr>
 

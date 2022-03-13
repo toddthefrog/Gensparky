@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ExampleModal from './ExampleModal';
 
 class RefreshedComponent extends Component {
 
