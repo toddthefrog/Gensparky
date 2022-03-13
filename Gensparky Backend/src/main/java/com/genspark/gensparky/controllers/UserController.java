@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000/")
+@CrossOrigin(origins = "http://24.99.46.153")
 public class UserController {
 
     @Autowired
@@ -18,54 +18,47 @@ public class UserController {
         this.userService = userService;
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+//    @CrossOrigin(origins = "http://localhost:8080")
     // get all users
     @GetMapping("/users")
     public List<User> getUsers(){
         return userService.getUsers();
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     // get user by id
     @GetMapping("/users/{Id}")
     public User getUser(@PathVariable String Id){
         return userService.getUserById(Long.parseLong(Id));
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     // post user
     @PostMapping("/users")
     public User addUser(@RequestBody User user){
         return userService.adduser(user);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
 //    @PutMapping("/users/{Id}")
     @PutMapping("/users/{Id}")
     public User updateUser(@PathVariable String Id, @RequestBody User user){
         return userService.updateUserById(Long.parseLong(Id), user);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     // delete user by id
     @DeleteMapping("/users/{Id}")
     public boolean deleteUser(@PathVariable String Id){
         return userService.deleteUserById(Long.parseLong(Id));
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/users/discord_id/{Id}")
     public User getUserByDiscordId(@PathVariable String Id){
         return userService.getUserByDiscordId(Long.parseLong(Id));
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/users/bench")
     public List<User> getBenchUsers(){
         return userService.getBenchUsers();
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/users/trainees")
     public List<User> getTrainees(){
         return userService.getTrainees();

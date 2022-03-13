@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const USERS_REST_API_URL = 'http://localhost:8080/users';
+const USERS_REST_API_URL = 'http://24.99.46.153:8081/users';
 
 class UserService {
 
@@ -21,11 +21,11 @@ class UserService {
     }
 
     getBenchUsers(){
-        return axios.get('http://localhost:8080/users/bench')
+        return axios.get('http://24.99.46.153:8081/users/bench')
     }
 
     getTrainees(){
-        return axios.get('http://localhost:8080/users/trainees')
+        return axios.get('http://24.99.46.153:8081/users/trainees')
     }
 }
 

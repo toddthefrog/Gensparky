@@ -9,7 +9,7 @@ const prefix = "!";
 
 client.on("messageCreate", function (message) {
   // urls  
-  const getUserByDiscordIdURL = "http://localhost:8080/users/discord_id/"
+  const getUserByDiscordIdURL = "http://24.99.46.153:8081/users/discord_id/"
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
   const commandBody = message.content.slice(prefix.length);
@@ -38,7 +38,7 @@ client.on("messageCreate", function (message) {
 });
 
 function fetchUser(url, discordId) {
-  const checkinURL = "http://localhost:8080/users/";
+  const checkinURL = "http://24.99.46.153:8081/users/";
   fetch(url + discordId)
     .then(response => response.json())
     .then(data1 => {
