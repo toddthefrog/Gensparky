@@ -1,7 +1,6 @@
 import React from 'react';
 import UserService from '../services/UserService';
 import DeleteUserComponent from './DeleteUserComponent';
-import UpdateUserComponent from './UpdateUserComponent';
 import AttendanceComponent from './AttendanceComponent';
 import { Table } from 'react-bootstrap';
 import RefreshedComponent from './RefreshedComponent'

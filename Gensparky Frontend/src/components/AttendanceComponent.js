@@ -41,7 +41,7 @@ export default function DeleteUserComponent(props) {
                 Late
             </Button >
         } else {
-            console.log(year, month, day, checkedInToday)
+            // console.log(year, month, day, checkedInToday)
             // return <Badge bg="danger">absent</Badge>
             return <Button variant="danger" disabled>
                 Absent

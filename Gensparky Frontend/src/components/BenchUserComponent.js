@@ -1,7 +1,6 @@
 import React from 'react';
 import UserService from '../services/UserService';
 import DeleteUserComponent from './DeleteUserComponent';
-import UpdateUserComponent from './UpdateUserComponent';
 import AttendanceComponent from './AttendanceComponent';
 import { Table } from 'react-bootstrap';
 import RefreshedComponent from './RefreshedComponent'
@@ -59,14 +58,6 @@ class BenchUserComponent extends React.Component {
                                         <td> <DeleteUserComponent id={user.id} /></td>
 
                                         <td>
-                                            {/* <UpdateUserComponent
-                                                id={user.id}
-                                                bench={user.bench}
-                                                cohort={user.cohort}
-                                                discordName={user.discordName}
-                                                firstName={user.firstName}
-                                                lastName={user.lastName}
-                                            /> */}
                                             <ModalComponent
                                                 id={user.id}
                                                 active={user.active}
