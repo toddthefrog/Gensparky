@@ -36,7 +36,7 @@ class BenchUserComponent extends React.Component {
                             <th>Last Name</th>
                             {/* <th>Active</th> */}
                             {/* <th>Cohort</th> */}
-                            <th>Discord ID</th>
+                            {/* <th>Discord ID</th> */}
                             <th>Status</th>
                             <th>Delete</th>
                             <th>Update</th>
@@ -53,7 +53,7 @@ class BenchUserComponent extends React.Component {
                                         <td> {user.lastName}</td>
                                         {/* <td> {user.bench.toString()}</td> */}
                                         {/* <td> {user.cohort}</td> */}
-                                        <td> {user.discordId}</td>
+                                        {/* <td> {user.discordId}</td> */}
                                         <td> <AttendanceComponent timeInMilliseconds={user.timeInMilliseconds} /></td>
 
                                         <td> <DeleteUserComponent id={user.id} /></td>

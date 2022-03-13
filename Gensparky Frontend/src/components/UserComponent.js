@@ -35,8 +35,8 @@ class UserComponent extends React.Component {
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Cohort</th>
-                            <th>Discord ID</th>
-                            <th>Last Check-in</th>
+                            {/* <th>Discord ID</th> */}
+                            {/* <th>Last Check-in</th> */}
                             <th>Status</th>
                             <th>Delete</th>
                             <th>Update</th>
@@ -52,8 +52,8 @@ class UserComponent extends React.Component {
                                         <td> {user.firstName}</td>
                                         <td> {user.lastName}</td>
                                         <td> {user.cohort}</td>
-                                        <td> {user.discordId}</td>
-                                        <td> {user.timeInMilliseconds} </td>
+                                        {/* <td> {user.discordId}</td> */}
+                                        {/* <td> {user.timeInMilliseconds} </td> */}
                                         <td> <AttendanceComponent timeInMilliseconds={user.timeInMilliseconds} /></td>
                                         <td> <DeleteUserComponent id={user.id} /></td>
                                         <td>
