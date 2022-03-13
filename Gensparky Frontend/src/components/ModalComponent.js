@@ -20,6 +20,7 @@ export default function ModalComponent(props) {
         let user = { id: userFormData.id, cohort: userFormData.cohort, discordId: userFormData.discordId, firstName: userFormData.firstName, lastName: userFormData.lastName, bench: userFormData.bench }
         event.preventDefault();
         UserService.updateUser(user, props.id)
+        console.log(user)
         window.location.reload();
         handleClose()
       }
@@ -55,7 +56,7 @@ export default function ModalComponent(props) {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBench">
                             <Form.Label>On Bench</Form.Label>
-                            <Form.Check name="bench" type="checkbox" checked={userFormData.bench} onChange={handleInputChange} />
+                            <Form.Control name="bench" type="text" value={userFormData.bench} onChange={handleInputChange} />
                         </Form.Group>
                     </Form>
                 </Modal.Body>

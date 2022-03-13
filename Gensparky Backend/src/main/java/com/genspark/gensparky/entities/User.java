@@ -13,10 +13,10 @@ public class User {
 
     private String lastName;
 
-    private boolean bench = true;
+    private boolean bench;
 
     @Column(name = "discord_id")
-    private Long discordId;
+    private String discordId;
 
     private long cohort;
 
@@ -25,7 +25,7 @@ public class User {
 
     public User(){}
 
-    public User(long id, String firstName, String lastName, boolean bench, Long discordId, long cohort, long timeInMilliseconds) {
+    public User(long id, String firstName, String lastName, boolean bench, String discordId, long cohort, long timeInMilliseconds) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -67,11 +67,11 @@ public class User {
         this.bench = bench;
     }
 
-    public Long getDiscordId() {
+    public String getDiscordId() {
         return discordId;
     }
 
-    public void setDiscordId(Long discordId) {
+    public void setDiscordId(String discordId) {
         this.discordId = discordId;
     }
 

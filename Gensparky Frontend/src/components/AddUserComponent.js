@@ -37,7 +37,6 @@ class AddUserComponent extends React.Component {
             bench: false,
             discordId: this.state.discordId,
             cohort: this.state.cohort
-
         }
 
         UserService.addUser(user);
@@ -46,7 +45,7 @@ class AddUserComponent extends React.Component {
 
     render() {
         return (
-            <div class="container">
+            <div className="container">
                 <br />
                 <Form onSubmit={this.handleSubmit}>
                     <Row className="mb-3">

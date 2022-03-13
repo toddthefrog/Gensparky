@@ -42,14 +42,14 @@ function fetchUser(url, discordId) {
   fetch(url + discordId)
     .then(response => response.json())
     .then(data1 => {
-      // console.log('Success:', data1);
+      console.log('Success:', data1);
       let userId = data1["id"];
       let firstName = data1["firstName"];
       let lastName = data1["lastName"];
-      let active = data1["active"];
+      let bench = data1["bench"];
       let cohort = data1["cohort"]
       let millis = Date.now();
-      var postData = { "firstName":firstName, "lastName":lastName, "active":active, "discordId":discordId, "cohort":cohort, "timeInMilliseconds": millis };
+      var postData = { "id":userId, "firstName":firstName, "lastName":lastName, "bench":bench, "discordId":discordId, "cohort":cohort, "timeInMilliseconds":millis };
       fetch(checkinURL + userId, {
         method: 'PUT', // or 'PUT'
         headers: {

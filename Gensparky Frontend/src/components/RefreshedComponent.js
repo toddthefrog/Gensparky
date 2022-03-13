@@ -1,17 +1,11 @@
+
 import React, { Component } from 'react';
 
 class RefreshedComponent extends Component {
 
     presentTime() {
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"
-        ];
         let currentdate = new Date();
-        var datetime = monthNames[currentdate.getDay()] + " " + currentdate.getMonth()
-            + " @ "
-            + currentdate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
-            + " EST"
-        return datetime
+        return currentdate.toDateString() + " @ " + currentdate.toLocaleTimeString()
     }
 
     render() {
