@@ -34,7 +34,6 @@ class UserComponent extends React.Component {
 
 
     componentDidMount(){
-
         UserService.getUsers()
             .then(
                 (response) => {

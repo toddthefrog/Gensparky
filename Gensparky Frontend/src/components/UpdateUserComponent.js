@@ -11,6 +11,18 @@ class UpdateUserComponent extends React.Component {
         }
 
     }
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //         id: this.props.match.params.id,
+    //         active: '',
+    //         cohort: '',
+    //         discordName: '',
+    //         firstName: '',
+    //         lastName:''
+    //     }
+        
+    // }
 
     // constructor(props){
     //     super(props);
