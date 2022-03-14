@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import UserComponent from './components/UserComponent';
+import AddUserComponent from './components/AddUserComponent';
 
 
 import {
@@ -8,10 +10,6 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import { Nav, NavLink, NavMenu } from "./components/NavbarElements";
-import BenchUserComponent from './components/BenchUserComponent';
-import AddUserComponent from './components/AddUserComponent'
-import UserComponent from './components/UserComponent';
   
 function App() {
   return (

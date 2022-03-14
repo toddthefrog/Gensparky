@@ -11,6 +11,7 @@ class UpdateUserComponent extends React.Component {
         }
 
     }
+
     // constructor(props){
     //     super(props);
     //     this.state = {
@@ -21,7 +22,6 @@ class UpdateUserComponent extends React.Component {
     //         firstName: '',
     //         lastName:''
     //     }
-        
     // }
 
     // constructor(props){

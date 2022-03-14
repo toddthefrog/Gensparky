@@ -1,12 +1,18 @@
 import React from 'react';
 import UserService from '../services/UserService';
 import DeleteUserComponent from './DeleteUserComponent';
+<<<<<<< HEAD
+=======
+import UpdateUserComponent from './UpdateUserComponent';
+>>>>>>> 1b55095 (attempt at modal)
 import Modal from './Modal';
 import { Table } from 'react-bootstrap';
 import RefreshedComponent from './RefreshedComponent'
 import ExampleModal from './ExampleModal';
 import AttendanceComponent from "./AttendanceComponent"
 import ModalComponent from './ModalComponent';
+import { useState } from "react";
+
 import { useState } from "react";
 
 class UserComponent extends React.Component {
@@ -34,6 +40,7 @@ class UserComponent extends React.Component {
 
 
     componentDidMount(){
+
         UserService.getUsers()
             .then(
                 (response) => {
