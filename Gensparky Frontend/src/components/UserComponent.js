@@ -1,23 +1,40 @@
 import React from 'react';
 import UserService from '../services/UserService';
 import DeleteUserComponent from './DeleteUserComponent';
-import UpdateUserComponent from './UpdateUserComponent';
-import AttendanceComponent from './AttendanceComponent';
+import Modal from './Modal';
 import { Table } from 'react-bootstrap';
 import RefreshedComponent from './RefreshedComponent'
-import ModalComponent from './ModalComponent'
+import ExampleModal from './ExampleModal';
+import AttendanceComponent from "./AttendanceComponent"
+import ModalComponent from './ModalComponent';
+import { useState } from "react";
 
 class UserComponent extends React.Component {
+    
+    
 
     constructor(props) {
         super(props)
         this.state = {
-            users: []
-        }
+            users: [],
+            show: false
+        };
+        
+        this.showModal = this.showModal.bind(this);
+        this.showModal = this.hideModal.bind(this);
+    }
+
+    showModal = () => {
+        this.setState({show: true})
+    }
+
+    hideModal = () => {
+        this.setState({show: false})
     }
 
 
     componentDidMount(){
+
         UserService.getUsers()
             .then(
                 (response) => {
@@ -83,6 +100,12 @@ class UserComponent extends React.Component {
                         }
                     </tbody>
                 </Table>
+                <Modal show={this.state.show} handleClose={this.hideModal}>
+          <         p>Modal</p>
+                </Modal>
+                <button type="button" onClick={this.showModal}>
+                    open
+                </button>
             </div>
         )
     }
