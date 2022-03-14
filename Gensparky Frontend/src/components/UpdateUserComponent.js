@@ -24,18 +24,6 @@ class UpdateUserComponent extends React.Component {
     //     }
     // }
 
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
-    //         id: this.props.match.params.id,
-    //         active: '',
-    //         cohort: '',
-    //         discordName: '',
-    //         firstName: '',
-    //         lastName:''
-    //     }
-    // }
-
     updateUser() {
         let id = 25;
         let testUser = {
