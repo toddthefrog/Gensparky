@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,25 +17,20 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav>
-          <NavMenu>
-            <NavLink to="/" activeStyle>
-              In Training
-            </NavLink>
-            <NavLink to="/home" activeStyle>
-              On Bench
-            </NavLink>
-            <NavLink to="/addUser" activeStyle>
-              Add Trainee
-            </NavLink>
-          </NavMenu>
-        </Nav>
+        <li>
+          <Link to="/">User List</Link>
+        </li>
+        <li>
+          <Link to="/adduser">Register User</Link>
+        </li>
+
         <Routes>
-          <Route exact path='/' element={< UserComponent />}></Route>
-          <Route exact path='/home' element={< BenchUserComponent />}></Route>
-          <Route exact path='/addUser' element={< AddUserComponent />}></Route>
+          <Route exact path='/' element={< UserComponent />}>
+          </Route>
+
+          <Route exact path='/adduser' element={< AddUserComponent />}>
+          </Route>
         </Routes>
-        <br />
       </div>
     </Router>
   );
