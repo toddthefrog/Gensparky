@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import UserService from "../services/UserService";
 import { Button } from 'react-bootstrap';
 
@@ -11,6 +11,18 @@ class UpdateUserComponent extends React.Component {
         }
 
     }
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //         id: this.props.match.params.id,
+    //         active: '',
+    //         cohort: '',
+    //         discordName: '',
+    //         firstName: '',
+    //         lastName:''
+    //     }
+        
+    // }
 
     updateUser() {
         let id = 25;
@@ -27,7 +39,8 @@ class UpdateUserComponent extends React.Component {
 
     }
 
-    render() {
+
+    render(){
         return (
             <div className="container">
                 <Button className="button--updateUser"
